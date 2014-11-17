@@ -1,0 +1,518 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.scrollzer.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<link href="zrssfeed-120/jquery.zrssfeed.css" rel="stylesheet" type="text/css" />
+		    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="zrssfeed-120/jquery.zrssfeed.min.js" type="text/javascript"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="css/bootstrap/js/bootstrap.js"></script>
+    
+		<!--<link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">-->
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header" class="skel-layers-fixed">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/logoM.png" alt="" /></span>
+							<h1 id="title">Shindo Admin</h1>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-exclamation-triangle">Emergencia</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-newspaper-o">Noticias</span></a></li>
+								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-check">Prevención</span></a></li>
+								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contacto</span></a></li>
+							</ul>
+						</nav>
+						
+				</div>
+				
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+				
+				</div>
+			
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+
+						</div>
+					</section>
+					
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container">
+					
+							<header>
+								<h2>Noticias</h2>
+							</header>
+							<h3>Twitter</h3>
+							<a class="twitter-timeline" href="https://twitter.com/Shindo_MX" data-widget-id="533732804756918272">Tweets por @Shindo_MX.</a>
+							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+							<h3>Noticias Minuto a Minuto</h3>
+							<div id="test">
+								
+							</div>
+
+							<script type="text/javascript">
+							$(document).ready(function () {
+							  $('#test').rssfeed('http://www.eluniversal.com.mx/rss/mexico.xml', {
+							    limit: 4
+							  });
+							});
+							</script>
+
+
+						</div>
+					</section>
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Prevención</h2>
+								<center><img src="images/prevencion.jpg" style="border-radius: 50%; height: 200px; width: auto;"></center>
+							</header>
+
+							<p>En esta sección de la aplicación se explicara el como prevenir problemas y emergencias graves en ciertas amenzas naturales por las que podríamos pasar. Además se sugieren algunos consejos, sobre todo para cuando ya nos encontramos en estado de emergencia y no se sabe que hacer para poder estar en las mejores condiciones.</p>
+							<div class="list-group">
+							  <a href="#" class="list-group-item active">Preguntar a Protección Civil
+							  <p class="list-group-item-text">LADA sin costo: 01 800 00413 00<br>http://www.proteccioncivil.gob.mx/<br></p></a>
+							  <a href="#terremotoModal" data-toggle="modal" class="list-group-item">Terremotos<br><img src="images/terremoto.png" style="height: 50px; width: auto;"></a>
+							  <a href="#volcanModal" data-toggle="modal" class="list-group-item">Erupción Volcánica<br><img src="images/volcan.png" style=" height: 50px; width: auto;"></a>
+							 <a href="#inundacionesModal" data-toggle="modal" class="list-group-item">Inundaciones<br><img src="images/inundacion.png" style=" height: 50px; width: auto;"></a>
+							  <a href="#huracanModal" data-toggle="modal" class="list-group-item">Huracanes<br><img src="images/huracan.png" style=" height: 50px; width: auto;"></a>
+							 <a href="#tormentaModal" data-toggle="modal" class="list-group-item">Tormentas Eléctricas<br><img src="images/tormenta.png" style=" height: 50px; width: auto;"></a>
+							  <a href="#consejosModal" data-toggle="modal" class="list-group-item">Consejos Prácticos para Emergencia<br><img src="images/emergencia.png" style=" height: 50px; width: auto;"></a>
+							</div>
+
+						</div>
+					</section>
+			
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contacto</h2>
+							</header>
+
+							<p>Al mandar un mensaje aquí se le podrá ayudar y poner en contacto con sitios de auxilio más cercano. Además es otra alternativa para comunicar emergencias o preguntas sobre las mismas</p>
+							
+							<form method="post" action="#">
+								<div class="row half">
+									<div class="6u"><input type="text" name="name" placeholder="Nombre" /></div>
+									<div class="6u"><input type="text" name="email" placeholder="Email" /></div>
+								</div>
+								<div class="row half">
+									<div class="12u">
+										<textarea name="message" placeholder="Mensaje"></textarea>
+									</div>
+								</div>
+								<div class="row">
+									<div class="12u">
+										<input type="submit" value="Enviar Mensaje" />
+									</div>
+								</div>
+							</form>
+							<br><br>
+							<div class="list-group">
+							  <a href="#" class="list-group-item active">Ir a Instituciones Importantes</a>
+							  <a href="http://www.cruzrojamexicana.org.mx/" class="list-group-item"><img src="http://www.cincoradio.com.mx/wp-content/uploads/2012/02/Cruz-Roja-color-logo-380x198.jpg" style="height: 70px; width: auto;"></a>
+
+							  <a href="http://www.ssp.gob.mx/portalWebApp/wlp.c?__c=7f9" class="list-group-item"><img src="http://www.ssp.gob.mx/portalWebApp/ShowBinary?nodeId=/BEA%20Repository/810130//imagen" style=" height: 70px; width: auto;"></a>
+
+							 <a href="http://www.bomberos.df.gob.mx/index.jsp" class="list-group-item"><img src="http://api.ning.com/files/NMfnGPN6nN4xWLNFZ20vvQyv*Je*UlNV0bFeziaJillqO9sokETwKm3qhaqKnNqNGwXVO09-j56wmtOjgujToEdnyfhC68sM/ESCUDOBOMBEROSORIGINAL.png" style=" height: 100px; width: auto;"></a>
+
+							  <a href="http://www.proteccioncivil.gob.mx/" class="list-group-item"><img src="https://pbs.twimg.com/profile_images/1292754013/logofinal.png" style=" height: 100px; width: auto;"></a>
+							</div>
+
+						</div>
+					</section>
+			
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Derechos Reservados</li><li>Diseño: <a href="http://html5up.net">ITC Puebla</a></li>
+					</ul>
+				
+			</div>
+
+<!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="terremotoModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Prevención frente a terremotos</h2>
+                            <img class="img-responsive" src="images/salida.jpg" alt="Image" style="border-radius: 50%; border: 1px solid black;">
+                      		<p class=MsoNormal style='text-align:justify'>Gran cantidad de personas llegan a ser dominadas por el pánico ante un terremoto, sin conseguir hacer nada. Si ellas no logran calmarse pueden
+							perder la vida. Por esto es importante  la prevención de terremotos, la planificación de acciones y tareas, para evitar la crisis en el momento crucial	y decisorio. Como bien sabemos, los terremotos son fenómenos naturales impredecibles, por lo que conocer, con claridad, qué hacer antes, durante y después es importante para la segur idad propia y de la familia.</span></p>
+							<img width=40% height=auto src="prueba_archivos/image001.jpg" style="float:left; margin-right: 35px;">
+                            <ul style="text-align : justify; list-style-type:circle;">
+                            <li>Revise el estado de las instalaciones de gas, agua y sistema eléctrico. Corrija las deficiencias.</li>
+							<li>Mantenga libre de obstáculos, pasillo y puertas, y cambie de lugar objetos o muebles que le puedan lastimar o caer encima, sobre todo cerca a las camas.</li>
+							<li>Establezca, un Plan de Emergencia y Evacuación Familiar, (no necesariamente escrito). Reúnase con su familia y vecinos para planificar acciones de prevención y de respuesta.</li>
+							<li>Tenga un maletín para emergencias, de preferencia una mochila, facíl de llevar en casos de evacuación.</li>
+							<li>Coordine previamente con la administración del edificio para contar con luces de mergencia, extintores operativos, que los pasadizos de acceso a zonas de escape y que las puertas, que conduce a las escaleras de escape, se puedan abrir hacia afuera y esten libres de obstáculos, como macetas.</li>
+							<li>No utilice los ascensores para salir, busque SALIDAS DE EMERGENCIA</li></ul>
+                            
+                            <h3>Acciones inmediatas después del Terremoto</h3>
+                            <ul style="text-align : justify; list-style-type:circle;">
+                           	<li>Revise si el inmueble está habitable y si el suministro eléctrico, asi como las conexiones de gas y agua están en buen estado, a fin de evitar incendios o inundaciones.</li>
+							<li>Solo haga uso de su linterna. No encienda fósforos ni velas.</li>
+							<li>Para comunicarse, use mensajes de texto. Llame por teléfono solo si es necesario y por breves instantes.</li>
+							<li>Acuda al Punto de Encuentro previamente establecido, con sus hijos y familiares, una vez concluido el sismo.</li>
+							<li>Si está en zona costera, aléjese de la playa lo antes posible para evitar un eventual Tsunami.</li>
+							<li>En lo posible, evite mover personas heridas o con fracturas, sin ayuda profesional; salvo que corran peligro de lesiones mayores.</li></ul>
+
+							<h3>Después del Terremoto</h3>
+							<p style="text-align : justify;">Los especialistas aconsejan que cuando finaliza la sacudida es importante mantener el puesto elegido. Comprobar que no se tiene ninguna lesión y ayudar a otras personas que sí han tenido heridas. Después, salir del edificio o de la casa con cuidado ya que puede haber escombros u otras réplicas del terremoto. Otro consejo es utilizar las escaleras para salir del recinto.<br><br>
+
+								• Además, no utilizar el gas hasta que los expertos hayan comprobado que funcionan correctamente y sin riesgos, lo mismo podemos aplicar al suministro eléctrico.<br>
+
+								• Un detalle a tener en cuenta, y que muchos especialistas olvidan de mencionar, es que cuando el terremoto ha terminado es importante no saturar las líneas telefónicas, para que los servicios sanitarios puedan atender las urgencias.<br><br>
+
+							Investigadores del todo el mundo estudian cómo prevenir los terremotos y anticiparse a los desastres que provoca. Mientras mejoran los sistemas de detección de terremotos, está en nuestras manos actuar ante estas emergencias y disminuir los daños que causan.</p>
+                            <button type="button" class="button scrolly" data-dismiss="modal">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="volcanModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Prevención frente a erupción volcánica</h2>
+                                              
+							<p style="text-align:justify">Una erupción volcánica puede ser un acontecimiento impresionante y destructivo. A continuación se indican varios consejos para evitar el peligro y saber qué hacer si te sorprende una erupción.</p>
+							<h3 style="text-align:justify">Consejos de seguridad:</h3>
+							<p style="text-align:justify">
+							• Mantente alejado de volcanes activos<br>
+							• Si vives cerca de un volcán activo, prepara un kit de emergencia que incluya gafas de seguridad, una máscara, una linterna y una radio en buen estado que funcione con pilas.<br></p>
+							<img src="images/kit.jpg">
+							<p style="text-align:justify">
+							• Elabora una ruta de evacuación y ten el depósito de gasolina del coche siempre lleno.<br>
+							• Evacua siguiendo las recomendaciones de las autoridades para no encontrarte lava y barro, así como rocas y escombros que puede arrojar el volcán.<br>
+							• Evita zonas de ríos y regiones bajas.<br>
+							• Antes de abandonar tu casa, ponte una camisa de manga larga y pantalones largos; usa gafas de seguridad o normales, sin lentillas. Ponte una máscara de emergencia o envuélvete la cara con un paño húmedo.<br>
+							• Si no vas a evacuar, cierra puertas y ventanas, y bloquea la chimenea y otros puntos de ventilación para evitar que la ceniza entre en la casa.<br>
+							Ten en cuenta que la ceniza puede sobrecargar el tejado y puedes necesitar retirarla.<br>
+							• Durante la limpieza, lleva elementos de protección<br>
+							• La ceniza puede dañar motores y piezas metálicas, así que evita conducir. Si debes conducir, no superes los 55 kilómetros por hora.</p>
+                            <button type="button" class="button scrolly" data-dismiss="modal">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="inundacionesModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Prevención frente a Inundación</h2>
+                            
+                            <h3 style="text-aling:justify">Cosas importantes</h3>      
+							<p style="text-align:justify">Proteger las cosas de valor, evitar tirar basura y colocar barricadas para que en agua no penetre en los hogares y alejarse de zonas de peligro, entre las medidas preventivas Dado que las inundaciones representan el fenómeno natural que más comúnmente se presenta en el territorio nacional, es de particular importancia estar preparados para enfrentarlas y responder adecuadamente.</p>
+							<h3 style="text-align:justify">Antes de la inundación</h3>
+							<p style="text-align:justify">
+							•	Identifique los lugares más altos de la región, que no puedan ser inundados, así como las rutas de acceso a los refugios temporales.<br>
+							•	Tenga a la mano un botiquín de primeros auxilios, lámpara de mano, radio portátil y las baterías respectivas.<br>
+							•	Guarde sus documentos personales en una bolsa de plástico, bien cerrada para evitar su pérdida o destrucción y de ser posible proporcione a algún pariente o amigo una copia de los documentos.<br>
+							•	Tenga a la mano un directorio con teléfonos de emergencia.<br>
+							•	Evite dejar solos a los niños, personas enfermas o con discapacidades durante la época de lluvias. Si lo hace, infórmelo a algún vecino.<br>
+							•	En la temporada de lluvias mantenga una reserva de agua potable, alimentos enlatados y ropa en lugares bien resguardados.<br>
+							•	Si vive en zonas bajas, casa de palma, carrizo o adobe, es preferible refugiarse en lugares más seguros, como la escuela, la iglesia o el palacio municipal (si están fuera de peligro).<br>
+							•	Permanezca bien informado por las autoridades y los medios de comunicación.<br>
+							•	Prepare un botiquín de emergencia que incluya pomadas antimicóticas o sea para evitar hongos y gotas para los ojos.<br>
+							•	Cuando sea avisado de que una inundación puede afectar la zona donde usted vive, desconecte los servicios de electricidad y gas.<br>
+							•	Evite durante todo el año tirar basura y taladrar árboles, factores que contribuyen a las inundaciones enormemente.<br>
+							•	Si la evacuación de la zona es necesaria ¡Prepárese y hágalo! Lleve consigo sólo lo indispensable.<br></p>
+
+							<h3 style="text-aling:justify">Durante la inundación</h3>
+							<p style="text-aling: justify">
+								•	Conserve la calma e infórmese constantemente a través de un radio portátil.<br>
+								•	Atienda las indicaciones de las autoridades.<br>
+								•	Evite caminar y cruzar por sectores o calles inundadas, sobre todo si observa que la corriente del agua es muy rápida. Aunque el nivel del agua sea bajo, puede aumentar rápidamente y desarrollar velocidades peligrosas, por lo que usted puede ser arrastrado por la corriente o golpeado por árboles, piedras o animales muertos que lleva la corriente.<br>
+								•	 No salga ni trate de manejar a través de caminos inundados.<br>
+								•	Si el vehículo se atasca al intentar cruzar una corriente, debe abandonarlo inmediatamente y buscar la parte más alta en los alrededores.<br>
+								•	Sea precavido especialmente durante la noche, ya que es más difícil identificar el incremento del nivel del agua en el cauce.<br>
+
+							</p>
+							<h3 style="text-aling:justify">Después de la inundación</h3>
+							<p style="text-aling: justify;">
+							•	Pasado el peligro, manténgase informado y siga las indicaciones de las autoridades. <br>
+							•	Manténgase alejado de la zona de desastre. Su presencia podría entorpecer el auxilio y la asistencia para las personas que han sido afectadas.<br>
+							•	No regrese a la zona afectada hasta que las autoridades indiquen que no hay peligro, ni habite su casa hasta estar plenamente seguro de que las condiciones en las que se encuentra son las adecuadas.<br>
+							•	Evite corrientes de agua.<br>
+							•	No se acerque a bardas o casas en peligro de derrumbarse.<br>
+							•	Aléjese de lugares donde puedan ocurrir deslaves.<br>
+							•	No tome agua ni consuma alimentos que hayan estado en contacto directo con agua de la inundación. Utilice sus reservas de agua potable y alimentos previamente almacenados.<br>
+							•	No pise ni toque cables eléctricos caídos.<br>
+							•	Limpie inmediatamente y con cuidado las sustancias inflamables, tóxicas, medicamentos u otros materiales que se hayan derramado.<br>
+							•	No mueva a los heridos. Reporte a las autoridades las emergencias que lo ameriten.<br>
+							•	Desaloje el agua que haya quedado estancada para evitar plaga de mosquitos, si tiene rocíe plaguicidas.<br>
+							•	Acuda a los centros de salud para ser vacunado y que le apliquen lo necesario en caso de problemas de la piel, ojos u otras enfermedades respiratorias y gastrointestinales.<br>
+
+							</p>
+                            <button type="button" class="button scrolly" data-dismiss="modal">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="huracanModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Prevención frente a Huracanes</h2>
+                            <p style="text-align:justify">
+      						<h3>Medidas de Prevención ante la llegada de huracanes</h3>
+							<br><br><h3 style="text-align:justify">Antes de que inicie la temporada de huracanes</h3>
+							<ul style="text-align:justify; list-style-type:circle;">
+							<li>Planee una ruta de evacuación.</li>
+							<li>Póngase en contacto con la oficina de manejo de emergencias local o el capítulo de la Cruz Roja, y pregunte por el plan de preparación para huracanes de la comunidad. Este plan debe incluir información acerca de las rutas de evacuación más seguras y los refugios cercanos.</li>
+							<li>Familiarícese con las rutas seguras tierra adentro.</li>
+							<li>Prepárese para conducir de 20 a 50 km tierra adentro para localizar un lugar seguro.</li>
+							<li>Tenga a la mano suministros para casos de desastre.</li>
+							<li>Linterna y pilas adicionales.</li>
+							<li>Radio portátil, operado con pilas, y pilas adicionales.</li>
+							<li>Botiquín y manual de primeros auxilios.</li>
+							<li>Alimentos y agua de emergencia.</li>
+							<li>Abrelatas no eléctrico.</li>
+							<li>Medicamentos esenciales.</li>
+							<li>Dinero en efectivo y tarjetas de crédito.</li>
+							<li>Ropa abrigadora.</li>
+							<li>Zapatos resistentes.</li>
+							<li>Asegúrese de que todos los miembros de la familia sepan cómo reaccionar después de un huracán.</li>
+							<li>Enseñe a los miembros de la familia cómo y cuándo desconectar el gas, la electricidad y el suministro de agua.</li>
+							<li>Enseñe a los niños cómo y cuándo llamar a los servicios de emergencia, la policía o departamento de bomberos y qué estación de radio sintonizar para oír información de emergencia.</li>
+							<li>Proteja sus ventanas.</li>
+							<li>Las contraventanas permanentes son la mejor protección. Un método más barato consiste en colocar paneles de madera contrachapada. Use tablones de madera de 1/2 pulgada corte a la medida de cada ventana.</li>
+							<li>Perfore agujeros cada 40 cm para los tornillos. Haga esto mucho antes de que llegue la tormenta.</li>
+							<li>Pode o corte las ramas muertas o débiles de los árboles.</li>
+							<li>Verifique que la póliza de seguros se encuentra vigente (completamente pagada o sin retrasos en pagos fraccionados), que las coberturas contratadas incluye riesgos hidrometereológicos (riesgos de inundación y/o huracán), que las sumas aseguradas están acorde con el valor del bien inmueble y contenidos.</li>
+							<li>Elabore un plan de comunicación de emergencia.</li>
+							<li>En caso de que los miembros de la familia se separen unos de otros durante un desastre (una posibilidad real durante el día cuando los adultos se encuentran en el trabajo y los niños en la escuela), tenga un plan para volver a reunirse. </li>
+							<li> Pida a un pariente o amigo que viva fuera del estado que actúe como el "contacto de la familia". Después de un desastre, a menudo es más fácil hacer llamadas de larga distancia.</li>
+							<li>Asegúrese de que todos en la familia sepan el nombre, dirección y teléfono de la persona de contacto.</li>
+							</ul></p>
+                            <button type="button" class="button scrolly" data-dismiss="modal">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="tormentaModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                        <h2>Prevención frente Tormentas Eléctricas</h2>
+                        <p style="text-align: justify">
+                        Como el rayo tiende a ir sobre cualquier objeto elevado, ya sea un edificio o un árbol, en virtud de que las cargas eléctricas se acumulan en los puntos más altos, la mejor protección la constituyen "los pararrayos", a continuación citamos algunas recomendaciones dadas por el Instituto Meteorológico Nacional:<br /><br />
+                        <ul style="list-style-type:circle; text-align: justify;"><li>No refugiarse debajo de un árbol aislado.  La humedad y la altura aumentan la intensidad del campo eléctrico y atraen la carga.  Los árboles que forman bosques son menos de temer porque aumentan las posibilidades de que la chispa eléctrica caiga lejos.</li>
+                        <li>En caso de encontrarse en pleno campo, no correr para escapar de la tormenta.  Es muy peligroso.  Si la tormenta eléctrica es muy intensa no hay ningún inconveniente  en colocarse horizontal sobre la tierra, que reduce al máximo el riesgo de ser alcanzados por el rayo.</li>
+                        <li>En las casas fuera de la ciudad, cierre puertas y ventanas.  No camine sobre suelos húmedos o con calzado mojado. </li>
+                        <li>Evite permanecer en lo alto de las colinas;  busque refugio en lugares bajos, pero no en quebradas o ríos</li>
+                        <li>No salga a la puerta ni tenga  las ventanas abiertas.</li>
+                        <li>No manejar herramientas ni objetos metálicos durante la tormenta.</li>
+                        <li>No tener contacto con el agua, por ejemplo cuando se está en la playa o cerca de un río o un lago.  La salinidad del agua permite que toda la intensidad de la descarga eléctrica produzca efectos fatales.</li>
+                        <li>Alejarse de las verjas metálicas o vallas.  Estas podrían causar la muerte aun sin hallarse en contacto con ellas.  Por tal motivo, se recomienda alejarse de toda clase de maquinaria, vehículos  y herramientas.</li>
+                        <li>Dentro de la casa, la máxima seguridad se encuentra sobre la cama, principalmente si es de madera.</li>
+                        <li>Durante la tormenta no utilice artefactos eléctricos; use el teléfono solo en una  emergencia.</li>
+                        <li>En lugares abiertos no use paraguas con punta de metal.</li>
+                        <li>Los vehículos constituyen un buen refugio; se debe quedar dentro del automóvil.</li><li>Los edificios grandes como escuelas y otros similares, son seguros.</li>
+                        </ul>
+                        </p>
+
+                        <button type="button" class="button scrolly" data-dismiss="modal">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+               <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="consejosModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                        <h2>Consejos Prácticos</h2><br><br>
+                        <h3 style="text-align:justify">Kit de Emergencia</h3>
+						<ul style="list-style-type:circle; text-align: justify;">
+						<li>Agua: considera dos litros por persona al día (incluye botellas chicas que son más fáciles de trasladar).</li>
+						<li>Comida: enlatada, barras energéticas y comida deshidratada. </li>
+						<li>Abrelatas manual.</li>
+						<li>Linternas y baterías.</li>
+						<li>Radio portátil con baterías adicionales.</li>
+						<li>Botiquín de primeros auxilios.</li>
+						<li>Ítemes especiales: medicamentos y anteojos. Considera las necesidades de niños, tercera edad y discapacitados.</li>
+						<li>Llaves de repuesto de tu casa y de tu auto.</li>
+						<li>Dinero en efectivo.</li>
+						<li>Copia del Plan de Emergencia.</li>
+						</ul>
+						<center><img src="http://photos.state.gov/libraries/mexico/69714/emergency/eacs_kit_preparedness_clip_image002.jpg"></center>
+
+						<br><br>
+						<h3 style="text-align:justify">Provisiones Adicionales</h3>
+						<br><br>  
+						<ul style="list-style-type:circle; text-align: justify;">
+						<li>Dos litros adicionales de agua por día.</li>
+						<li>Velas, encendedores o fósforos.</li>
+						<li>Una muda de ropa y zapatos (para cada miembro de la familia).</li>
+						<li>Saco de dormir o una frazada (para cada miembro de la familia).</li>
+						<li>Artículos de aseo.</li>
+						<li>Jabón gel para manos.</li>
+						<li>Papel higiénico.</li>
+						<li>Utensilios de cocina (por lo menos dos ollas).</li>
+						<li>Bolsas de basura.</li>
+						<li>Cloro o tabletas para purificar el agua.</li>
+						<li>Herramientas básicas: martillo, guantes, destornilladores, alicates, llave inglesa, cortapluma o cuchillo pequeño.</li>
+						<li>Parrilla o asador.</li>
+						<li>Silbato.</li>
+						</ul>
+
+						<br>
+						<h3 style="text-align:justify">Kit emergencia para el auto</h3>
+						<ul style="list-style-type:circle; text-align: justify;">
+						<li>Comida que no se eche a perder.</li>
+						<li>Agua embotellada.</li>
+						<li>Frazadas.</li>
+						<li>Una muda de ropa.</li>
+						<li>Botiquín de primeros auxilios.</li>
+						<li>Una pala.</li>
+						<li>Velas y fósforos.</li>
+						<li>Extintor.</li>
+						<li>Bolsas plásticas.</li>
+						<li>Linternas con baterías.</li>
+						<li>Herramientas y manguera de hule.</li>
+						<li>Medicamentos necesarios.</li>
+						<li>Toallas prehumedecidas.</li>
+						<li>Mapas.</li>
+						<li>Copia del Plan de Emergencia y documentos.</li>
+						<li>Señales luminosas.</li>
+						</ul>
+						<center><img src="http://www.marcadecoche.com/images/kit-emergencia2.jpg"></center>
+				<button type="button" class="button scrolly" data-dismiss="modal">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+	</body>
+</html>
