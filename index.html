@@ -41,7 +41,7 @@
 
 		<!-- GOOGLE MAPS -->
 		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAxn-evD11uENoCSOUEvQCqTL8xPEP6lGM&sensor=false"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDOy9nIBid1OCQbS6LQD-yoaXB7PtdWOwc&sensor=false"></script>
 
 <script type="text/javascript">
 $(document).ready(function() {
@@ -70,21 +70,6 @@ $(document).ready(function() {
 		   	map = new google.maps.Map(document.getElementById("google_map"), googleMapOptions);			
 			
 			creaMarcadores();
-			//Right Click to Drop a New Marker
-			google.maps.event.addListener(map, 'rightclick', function(event) {
-				//Edit form to be displayed with new marker
-				var EditForm = '<p><div class="marker-edit">'+
-				'<form action="ajax-save.php" method="POST" name="SaveMarker" id="SaveMarker">'+
-				'<label for="pName"><span>Nombre:</span><input type="text" name="pName" class="save-name" placeholder="Nombre" maxlength="40" /></label>'+
-				'<label for="pDesc"><span>Descripci\u00f3n :</span><textarea name="pDesc" class="save-desc" placeholder="Ingrese Descripci\u00f3n" maxlength="150"></textarea></label>'+
-				'<label for="pType"><span>Tipo :</span> <select name="pType" class="save-type"><option value="siniestro">Siniestro</option><option value="incendio">Incendio</option>'+
-				'<option value="refugio">Refugio</option></select></label>'+
-				'</form>'+
-				'</div></p><button name="save-marker" class="save-marker">Guardar Marcador</button>';
-
-				//Drop a new Marker with our Edit Form
-				create_marker(event.latLng, 'Nuevo Marcador', EditForm, true, true, true, "icons/pin_green.png");
-			});
 										
 	}
 	
@@ -154,75 +139,32 @@ $(document).ready(function() {
 		}
 	}
 	
-	//############### Remove Marker Function ##############
-	function remove_marker(Marker)
-	{
-		
-		/* determine whether marker is draggable 
-		new markers are draggable and saved markers are fixed */
-		if(Marker.getDraggable()) 
-		{
-			Marker.setMap(null); //just remove new marker
-		}
-		else
-		{
-			//Remove saved marker from DB and map using jQuery Ajax
-			var mLatLang = Marker.getPosition().toUrlValue(); //get marker position
-			var myData = {del : 'true', latlang : mLatLang}; //post variables
-			$.ajax({
-			  type: "POST",
-			  url: "http://shindo.ga/map_process.php",
-			  data: myData,
-			  success:function(data){
-					Marker.setMap(null); 
-					alert(data);
-				},
-				error:function (xhr, ajaxOptions, thrownError){
-					alert(thrownError); //throw any errors
-				}
-			});
-		}
-
-	}
-	
-	//############### Save Marker Function ##############
-	function save_marker(Marker, mName, mAddress, mType, replaceWin)
-	{
-		//Save new marker using jQuery Ajax
-		var mLatLang = Marker.getPosition().toUrlValue(); //get marker position
-		var myData = {name : mName, address : mAddress, latlang : mLatLang, type : mType }; //post variables
-		console.log(replaceWin);		
-		$.ajax({
-		  type: "POST",
-		  url: "map_process.php",
-		  data: myData,
-		  success:function(data){
-				replaceWin.html(data); //replace info window with new html
-				Marker.setDraggable(false); //set marker to fixed
-				Marker.setIcon('icons/pin_blue.png'); //replace icon
-            },
-            error:function (xhr, ajaxOptions, thrownError){
-                alert(thrownError); //throw any errors
-            }
-		});
-	}
-
 	function creaMarcadores()
 	{
-					//Load Markers from the XML File, Check (map_process.php)
-			$.get("map_process.php", function (data) {
-				$(data).find("marker").each(function () {
-					  var name 		= $(this).attr('name');
-					  var address 	= '<p>'+ $(this).attr('address') +'</p>';
-					  var type 		= $(this).attr('type');
-					  var point 	= new google.maps.LatLng(parseFloat($(this).attr('lat')),parseFloat($(this).attr('lng')));
-					  if(!creada(point))
-					  {
-					  puntos.push(point);
-					  create_marker(point, name, address, false, false, false, "icons/pin_blue.png");
-					  }
-				});
-			});	
+
+		$.ajax({
+	    url: 'http://shindo.ga/map_ubicaciones.php',
+	    dataType: 'jsonp',
+	    jsonp: 'jsoncallback',
+	    timeout: 5000,
+	    success: function(data, status){
+            $.each(data, function(i,item){
+                var name = item.name;
+                var point = new google.maps.LatLng(parseFloat(item.latitude),parseFloat(item.longitude));
+               	var address= item.address;
+               	var type = item.type;
+  				if(!creada(point))
+				  {
+				  puntos.push(point);
+				  create_marker(point, name, address, false, false, false, "icons/pin_blue.png");
+				  }
+            });
+        },
+	    error: function(){
+	        //error loading data
+	    }
+		});
+
 	}
 	function creada(punto)
 	{
@@ -242,7 +184,7 @@ $(document).ready(function() {
 	}
 setInterval(function() {
   creaMarcadores();
-}, 5000);
+}, 1000);
 
 });
 
@@ -386,8 +328,6 @@ button.save-marker, button.remove-marker{border: none;background: rgba(0, 0, 0, 
 							<div class="list-group">
 							  <a href="#" class="list-group-item active">Ir a Instituciones Importantes</a>
 							  <a href="http://www.cruzrojamexicana.org.mx/" class="list-group-item"><img src="http://www.cincoradio.com.mx/wp-content/uploads/2012/02/Cruz-Roja-color-logo-380x198.jpg" style="height: 70px; width: auto;"></a>
-
-							  <a href="http://www.ssp.gob.mx/portalWebApp/wlp.c?__c=7f9" class="list-group-item"><img src="" style=" height: 70px; width: auto;"></a>
 
 							 <a href="http://www.bomberos.df.gob.mx/index.jsp" class="list-group-item"><img src="http://api.ning.com/files/NMfnGPN6nN4xWLNFZ20vvQyv*Je*UlNV0bFeziaJillqO9sokETwKm3qhaqKnNqNGwXVO09-j56wmtOjgujToEdnyfhC68sM/ESCUDOBOMBEROSORIGINAL.png" style=" height: 100px; width: auto;"></a>
 
